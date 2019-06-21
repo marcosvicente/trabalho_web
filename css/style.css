@@ -1,3 +1,117 @@
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 body{
   background:#fff;
+  font-size: 10px;
+  font-family: 'Roboto', sans-serif;
 }
+
+/* menu */
+.nav-menu{
+  background: #87ceeb;
+  padding: 1.2rem;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+}
+.nav-menu .nav-logo {
+  width:50%;
+}
+
+.nav-menu .nav-logo img{
+  width:10rem;
+  height:5rem;
+}
+.nav-menu .nav-content{
+  display:none;
+  height:100%;
+  width:100%;
+  top:0;
+  left:0;
+  position:fixed;
+  height: 100%;
+  width:100%;
+  background:#87ceeb;
+}
+
+.nav-menu .nav-button--mobile--open{
+  float:right;
+  cursor:pointer;
+  margin-top:1.7rem;
+}
+.nav-menu .nav-button--mobile--open i{
+  color: #fff;
+  cursor:pointer;
+  font-size:2rem;
+}
+.nav-menu .nav-button--mobile--close{
+  right:0;
+  cursor:pointer;
+  position:absolute;
+  float:right;
+  padding: 1rem;
+  right: 0;
+  cursor:pointer;
+}
+.nav-menu .nav-button--mobile--close i{
+  font-size:2rem;
+  color: #fff;
+  cursor:pointer;
+}
+.nav-menu .nav-content .nav-list{
+  width:80%;
+}
+.nav-menu .nav-content .nav-list .nav-listItem{
+  line-height:3rem;
+  list-style-type:none;
+  position:relative;
+  padding: 1rem;
+  cursor:pointer;
+}
+.nav-menu .nav-content .nav-list .nav-listItem:hover{
+  background-color: #ffffff3d;
+}
+.nav-menu .nav-content .nav-list .nav-listItem a{
+  color:#fff;
+  text-decoration:none;
+  font-size:1.2rem;
+  line-height:1.2rem;
+}
+@media only screen and (min-width: 600px) {
+  .nav-menu{
+    display:flex;
+    padding:0rem;
+  }
+  .nav-menu .nav-logo img{
+    width:10rem;
+    height:5rem;
+    padding:1rem;
+  }
+  .nav-menu .nav-content{
+    display:block;
+    top:inherit;
+    left:inherit;
+    position:inherit;
+    height: auto;
+    width:50%;
+    background:initial;
+    right:0;
+  }
+
+  .nav-menu .nav-button--mobile--open,
+  .nav-menu .nav-button--mobile--close{
+    display:none;
+  } 
+
+  .nav-menu .nav-content .nav-list{
+    display:flex;
+  }
+  .nav-menu .nav-content .nav-list .nav-listItem{
+    line-height:1rem;
+    list-style-type:none;
+    position:relative;
+    padding: 1.5rem;
+  }
+}
+
