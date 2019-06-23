@@ -5,17 +5,34 @@ function mobileCloseMenu() {
   document.getElementById("menu-content").style.display = "none";
 }
 
-function bannerIndex() {
-  var date = new Date();
-  if (date.getHours() > 6 && date.getHours() < 18) {
-    var day = document.getElementById("image-home");
-    day.classList.add("dayIndex");
-  } else {
-    var night = document.getElementById("image-home");
-    night.classList.add("nightIndex");
-  }
+var slideIndex = 1;
+function plusSlides(n) {
+  showSlides(slideIndex += n);
 }
 
-window.onload = function() {
-  bannerIndex();
+function currentSlide(n) {
+  showSlides(slideIndex = n);
 }
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("slide");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+  
+  this.setTimeout(function(){
+    showSlides(slideIndex += 1);
+  }, 10000);
+}
+
+showSlides(slideIndex);
