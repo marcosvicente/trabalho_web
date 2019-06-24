@@ -1,10 +1,22 @@
 function mobileOpenMenu() {
   document.getElementById("menu-content").style.display = "block";
 }
+
 function mobileCloseMenu() {
+ if (window.innerWidth <  767) {
   document.getElementById("menu-content").style.display = "none";
+ }
 }
 
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+
+  var hide = document.getElementsByClassName("hide-navbar")[0]
+    hide.classList.remove("hide-navbar-style");
+}
+
+
+// slide
 var slideIndex = 1;
 function plusSlides(n) {
   showSlides(slideIndex += n);
