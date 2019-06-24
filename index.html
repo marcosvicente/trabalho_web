@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <!-- css reset  -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/style.css" media="screen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-menu hide-navbar-style">
+        <a href="#" class="nav-logo">
+           <h6>GSchool</h6>
+        </a>
+        <a href="#" class="nav-button--mobile--open" onclick="mobileOpenMenu()">
+          <i class="material-icons">menu</i>
+        </a>
+        <div class="nav-content" id="menu-content">
+          <a href="#" class="nav-button--mobile--close" onclick="mobileCloseMenu()">
+            <i class="material-icons">clear</i>
+          </a>
+
+          <ul class="nav-list">
+            <li class="nav-listItem">
+              <a href="#">
+                Home
+              </a>
+            </li>
+            <li class="nav-listItem">
+              <a href="about.html">
+                Sobre
+              </a>
+            </li>
+            <li class="nav-listItem">
+              <a href="blog.html">
+                Blog
+              </a>
+            </li>
+            <li class="nav-listItem">
+              <a href="about.html#l#about-contact">
+                Contato
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="index-home" id="image-home">
+      <div class="row">
+        <div class="col mobile12 medium12">
+           <div class="slideshow">
+             <div class="slide fade">
+               <img src="img/day_1920.jpg" alt="">
+               <div class="text">
+                 <h1>GSchool</h1> 
+                 <h2>Formação integral do seu filho</h2>
+               </div>
+             </div>
+             <div class="slide fade">
+               <img src="img/lapis.jpg" alt="">
+               <div class="text">
+                  <h2>Preparação Acadêmica, Social e Física</h2>
+               </div>
+             </div>
+             <div class="slide fade">
+               <img src="img/night_1920.jpg" alt="">
+               <div class="text">
+                 <h2>Desenvolvimento de competências e habilidades para um mundo digital</h2>
+               </div>
+             </div>
+             <a class="prev" onclick="plusSlides(-1)">
+               <i class="material-icons">
+                  arrow_back_ios
+               </i>
+             </a>
+             <a class="next" onclick="plusSlides(1)">
+              <i class="material-icons">
+                  arrow_forward_ios
+               </i>
+
+             </a>
+           </div>
+           <div class="slideshow-dot">
+             <span class="dot" onclick="currentSlide(1)"></span> 
+             <span class="dot" onclick="currentSlide(2)"></span> 
+             <span class="dot" onclick="currentSlide(3)"></span> 
+           </div>
+        </div>
+      </div>
+    </section>
+    <script charset="utf-8" src="js/script.js"></script>
+  </body>
+</html>
